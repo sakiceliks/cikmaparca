@@ -6,7 +6,10 @@ import { SearchBar } from "@/components/SearchBar"
 import { QuickActions } from "@/components/QuickActions"
 import { PartCategories } from "@/components/PartCategories"
 import { BottomNavigation } from "@/components/BottomNavigation"
-import { mainCategories, quickActions, partCategories } from "@/data/mockData"
+import { mainCategories, quickActions, partCategories, brandCategories, popularBrandsCategories, townCategories } from "@/data/mockData"
+import { BrandCategories } from "@/components/BrandCategories"
+import { PopularBrandsCategories } from "@/components/PopularBrandsCategories"
+import { TownCategories } from "@/components/TownCategories"
 
 export default function HomePage() {
   const handleSearch = (query: string) => {
@@ -40,6 +43,9 @@ export default function HomePage() {
 
         <PartCategories categories={partCategories} onCategoryClick={handleCategoryClick} onShowAll={handleShowAll} />
 
+        <TownCategories categories={townCategories} limit={9} onCategoryClick={handleCategoryClick} onShowAll={handleShowAll} />
+        <PopularBrandsCategories limit={9} categories={popularBrandsCategories} onCategoryClick={handleCategoryClick} onShowAll={handleShowAll}/>
+<BrandCategories categories={brandCategories} limit={9} onCategoryClick={handleCategoryClick} onShowAll={handleShowAll} />
         {/* Description Text */}
         <div className="w-full">
           <div className="w-full max-w-7xl mx-auto px-4 lg:px-6 pb-4 md:pb-6">

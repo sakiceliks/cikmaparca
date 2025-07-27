@@ -1,5 +1,6 @@
 import { ArrowLeft, Share2, Star, Phone, MessageCircle, Home } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import Link from "next/link"
 
 export default function DetailPage() {
   const productDetails = [
@@ -92,10 +93,10 @@ export default function DetailPage() {
       {/* Bottom Action Bar */}
       <div className="fixed bottom-0 left-1/2 transform -translate-x-1/2 w-full max-w-sm bg-white border-t border-gray-200">
         <div className="flex">
-          <button className="flex-1 flex flex-col items-center py-3 text-gray-600">
+          <Link href="//" className="flex-1 flex flex-col items-center py-3 text-gray-600">
             <Home className="w-5 h-5 mb-1" />
             <span className="text-xs">Anasayfa</span>
-          </button>
+          </Link>
           <button className="flex-1 flex items-center justify-center bg-slate-600 text-white">
             <Phone className="w-4 h-4 mr-2" />
             <span className="text-sm">Ara</span>
